@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Masukkan Kode Try Out</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:120px;">
+
+  <h2>Masukkan Kode Try Out SKD</h2>
+
+  <input type="text" id="kode" placeholder="Contoh: FREE-SKD1"
+    style="padding:10px; font-size:16px;"><br><br>
+
+  <button onclick="cekKode()" style="padding:12px 25px;">
+    MULAI TRY OUT
+  </button>
+
+  <p id="notif" style="color:red;"></p>
+
+  <script>
+    function cekKode() {
+      const kode = document.getElementById("kode").value;
+      if (kode === "FREE-SKD1") {
+        window.location.href = "cat.html";
+      } else {
+        document.getElementById("notif").innerText = "Kode salah!";
+      }
+    }
+  </script>
+
+</body>
+</html>
